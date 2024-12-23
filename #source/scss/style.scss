@@ -1,0 +1,249 @@
+// Файл обнуляющих стилей
+@import "_nullstyle";
+@import "_stylevariables";
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+	border: 3px solid black;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	// border: 3px solid black;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.header {
+	// border: 3px solid red;
+	background: $color_violet;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	&__row {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+
+		// border: 2px solid gray;
+		& img {
+			max-width: 60px;
+		}
+	}
+
+	&__hello {
+		// border: 2px solid gray;
+		padding: 10px 10px 10px 10px;
+		font-family: $viadoraliblefont;
+		font-size: 20px;
+		color: $color_white3;
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__text {
+		text-align: center;
+	}
+
+	&__menu {
+		// border: 2px solid gray;
+		flex: 1 1 auto;
+		display: flex;
+	}
+}
+
+.menu {
+	&__list {
+		flex: 1 1 auto;
+		// border: 3px solid white;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		padding: 0px 0px 0px 20px;
+	}
+
+	&__item {
+		margin: 0px 0px 3px 0px;
+		flex: 0 1 auto;
+		padding: 6px 10px 6px 10px;
+		border-radius: 10px;
+		background: linear-gradient(top, $color_sky, $color_biruza4);
+		box-shadow: 2px 2px 3px black, inset 2px 2px 3px white;
+		cursor: pointer;
+		transition: background 300ms linear 0ms, box-shadow 1000ms linear 0s;
+		font-family: $federofont;
+		font-size: 18px;
+
+		& a {
+			color: black;
+			transition: color 400ms linear 0ms;
+		}
+
+		&:hover {
+			background: linear-gradient(top, $color_brown, $color_gold2);
+			transition: background 300ms linear 0ms;
+		}
+
+		&:active {
+			box-shadow: 2px 2px 3px white, inset 2px 2px 3px black;
+		}
+
+		&:active a {
+			color: white;
+			transition: color 400ms linear 0ms;
+		}
+	}
+}
+
+.main {
+	// border: 3px solid blue;
+	flex: 1 1 auto;
+	display: flex;
+
+	// &__navigation {
+	// 	// border: 3px solid $color_biruza;
+	// }
+
+	&__content {
+		// border: 3px solid red;
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__row {
+		// border: 3px solid blue;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		flex: 1 1 auto;
+	}
+
+	&__card {
+		// border: 3px solid grey;
+		flex: 1 1 50%;
+	}
+}
+
+.card {
+	padding: 10px 10px 10px 10px;
+	background: $color_yellow;
+	display: flex;
+	flex-direction: column;
+
+	&__title {
+		font-family: $decorfont;
+		font-size: 20px;
+		color: $color_grey;
+		text-align: center;
+		padding: 0px 0px 20px 0px;
+	}
+
+	&__image {
+		position: relative;
+		min-width: 300px;
+		padding: 0px 0px 58% 0px;
+		flex: 1 1 auto;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			// top: 0;
+			// left: 0;
+			object-fit: cover;
+			// object-position: 10% 50%;
+		}
+	}
+}
+
+.navigation {
+	opacity: 0.7;
+	background: $color_violet2;
+	display: flex;
+
+	&__content {
+		border: 3px solid grey;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		// border: 3px solid orange;
+		padding: 20px 10px 20px 10px;
+		text-align: center;
+		font-family: $viadoraliblefont;
+		font-size: 20px;
+		color: black;
+	}
+
+	&__list {
+		// border: 3px solid orange;
+		flex: 1 1 auto;
+	}
+}
+
+.list {
+	// border: 3px solid green;
+	padding: 20px 0px 0px 20px;
+
+	&_item {
+		cursor: pointer;
+		font-family: $federofont;
+		font-size: 18px;
+		color: $color_black;
+		padding: 0px 0px 15px 0px;
+		transition: color 400ms ease-out 0ms;
+		text-decoration: underline;
+
+		& a {
+			color: inherit;
+		}
+
+		&:hover {
+			color: $color_white;
+			text-decoration: none;
+		}
+
+		&:active {
+			color: rgb(131, 15, 15);
+			text-decoration: none;
+			position: relative;
+			top: 2px;
+			left: 2px;
+		}
+	}
+}
+
+.footer {
+	// border: 8px solid green;
+	background: $color_violet;
+
+	&__row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__text {
+		font-family: $italianafont;
+		font-size: 18px;
+		color: $color_white3;
+		padding: 4px 4px 4px 4px;
+		letter-spacing: 5px;
+	}
+}
